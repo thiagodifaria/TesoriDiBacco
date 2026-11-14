@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Button from '../components/Button';
 import SectionTitle from '../components/SectionTitle';
 import WineCard from '../components/WineCard';
-import { MOCK_WINES, MOCK_SUBSCRIPTION_TIERS, MOCK_TESTIMONIALS, MOCK_ARTICLES, MOCK_RESTAURANTS, APP_FULL_NAME, APP_NAME, PRIMARY_COLOR_TEXT, GOLD_ACCENT_TEXT, TEXT_COLOR } from '../constants';
+import { MOCK_WINES, MOCK_SUBSCRIPTION_TIERS, MOCK_TESTIMONIALS, MOCK_ARTICLES, MOCK_RESTAURANTS, APP_FULL_NAME, APP_NAME, PRIMARY_COLOR_TEXT, GOLD_ACCENT_TEXT } from '../constants';
 import { RoutePath, SubscriptionTier, Wine, Restaurant, JournalArticle } from '../types';
 import WineGlassIcon from '../components/icons/WineGlassIcon';
 import BookOpenIcon from '../components/icons/BookOpenIcon';
@@ -40,43 +40,40 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="scroll-smooth snap-y snap-mandatory w-screen overflow-x-hidden">
-      <section className="full-page-section text-center bg-light-warm-grey">
-         {/*
-          **********************************************************************
-          * ÁREA RESERVADA PARA O FUNDO VISUAL DA SEÇÃO HERÓI (OPCIONAL)       *
-          * *
-          * Para adicionar uma imagem de fundo:                                *
-          * <img 
-          *   src="/images/hero/sua_imagem.jpg" 
-          *   alt="imagem para acessibilidade"
-          *   className="absolute inset-0 w-full h-full object-cover z-0" 
-          * />
-          * <div className="absolute inset-0 bg-black opacity-30 z-0"></div> 
-          * *
-          * Para um vídeo de fundo (considere o desempenho):                    *
-          * <video 
-          *   autoPlay 
-          *   loop 
-          *   muted 
-          *   playsInline 
-          *   className="absolute inset-0 w-full h-full object-cover z-0"
-          * >
-          *   <source src="/videos/your_hero_video.mp4" type="video/mp4" />
-          *   Your browser does not support the video tag.
-          * </video>
-          * <div className="absolute inset-0 bg-black opacity-30 z-0"></div>            
-          ***********************************************************************
-        */}
-        <div className="relative z-10 p-6 animate-fadeIn max-w-4xl">
-          <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif mb-6 leading-tight font-bold tracking-tight ${TEXT_COLOR}`}>
-            Tesori di Bacco: L'Anima del Vino, Goccia a Goccia.
-          </h1>
-          <p className={`text-lg sm:text-xl md:text-2xl font-sans mb-10 max-w-3xl mx-auto text-gray-700 leading-relaxed`}>
-            Receba mensalmente vinhos artesanais de curadoria especializada, com acesso a histórias, análises detalhadas e harmonizações exclusivas. Inicie sua jornada sensorial.
-          </p>
-          <Button to={RoutePath.MembershipPlans} variant="primary" size="lg" className="text-base md:text-lg shadow-lg hover:shadow-xl transform hover:scale-105">
-            Descubra Nossos Planos
-          </Button>
+      <section className="relative isolate min-h-[100svh] snap-start overflow-hidden bg-charcoal-gray">
+        <img
+          src="/images/hero/toscana-hero.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover object-[center_56%]"
+          fetchPriority="high"
+        />
+        <div aria-hidden="true" className="absolute inset-0 bg-black/20" />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-black/15" />
+        <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
+
+        <div className="container relative z-10 mx-auto flex min-h-[100svh] w-full max-w-7xl flex-col justify-end px-5 py-10 sm:px-8 md:px-12 md:py-14">
+          <div className="max-w-4xl animate-fadeIn text-left">
+            <p className="mb-5 flex items-center gap-3 font-sans text-[0.68rem] font-bold uppercase tracking-[0.24em] text-white/80 sm:text-xs">
+              <span aria-hidden="true" className="h-px w-9 bg-gold-accent" />
+              Um clube de descobertas enológicas
+            </p>
+            <h1 className="mb-6 max-w-4xl font-serif text-5xl font-medium leading-[0.94] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
+              L’anima del vino,
+              <span className="mt-1 block italic">goccia a goccia.</span>
+            </h1>
+            <p className="mb-8 max-w-2xl font-sans text-base leading-relaxed text-white/90 sm:text-lg md:text-xl">
+              Receba mensalmente vinhos artesanais de curadoria especializada, com acesso a histórias, análises detalhadas e harmonizações exclusivas. Inicie sua jornada sensorial.
+            </p>
+            <Button to={RoutePath.MembershipPlans} variant="primary" size="lg" className="text-base shadow-lg transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+              Descubra Nossos Planos
+            </Button>
+          </div>
+
+          <div aria-hidden="true" className="absolute bottom-8 right-8 hidden items-center gap-3 font-sans text-[0.65rem] font-bold uppercase tracking-[0.2em] text-white/75 md:flex lg:bottom-10 lg:right-12">
+            <span>Scroll para descobrir</span>
+            <span className="h-10 w-px bg-gold-accent" />
+          </div>
         </div>
       </section>
 
