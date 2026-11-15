@@ -1,6 +1,6 @@
 # Tesori di Bacco
 
-![Tesori di Bacco Logo](https://img.shields.io/badge/Tesori_di_Bacco-FRONTEND%20SHOWCASE-8B0027?style=for-the-badge&logo=wine)
+![Tesori di Bacco Logo](https://img.shields.io/badge/Tesori_di_Bacco-Premium%20Wine%20Club-8B0027?style=for-the-badge&logo=wine) ![Showcase Category](https://img.shields.io/badge/Category-FRONTEND%20SHOWCASE-8B0027?style=for-the-badge)
 
 **Premium Wine Club Experience - Front-end Showcase**
 
